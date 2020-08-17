@@ -1,0 +1,25 @@
+{% extends 'blog/base.html'%}
+{% block content %}
+<h1>About page</h1>
+{% load static %}
+
+
+  <div style="height: 100px; background-color: black; opacity: 0.8; width: 400px; height: 80px; padding-top: 10px; padding-left: 18px; 
+  padding-bottom: 8px; border-radius: 5px;">
+  <form action="mati" method="post">
+    {% csrf_token %}
+    <h4 style="color: #ffffff"><b>Search according to city</b></h4>
+    
+      <label for="c">City</label>
+      <input type="text" placeholder="Enter cityname" name="c" style="color:black;" required>
+      <button type="submit" class="btn btn-success">Search</button>
+
+  </form>
+</div>
+
+ <img src= "../media/img.png" alt="not found">
+<img src= "../media/img1.png" alt="not found">
+
+
+
+{% endblock content %}
